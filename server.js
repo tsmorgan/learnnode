@@ -12,7 +12,8 @@ app.set('view engine', 'handlebars');
 // doing something on every request.
 app.use(function (req, res, next) {
   // console.log("got a request");
-  console.log(process.env.NODE_ENV);
+  var environment = process.env.NODE_ENV;
+  console.log(environment);
   next();
 });
 
